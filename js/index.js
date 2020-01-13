@@ -87,5 +87,16 @@ address[2].textContent = siteContent['contact']['email'];
 let copyright = document.querySelector('footer p');
 copyright.textContent = siteContent['footer']['copyright'];
 
+//set links green
 navLinks.forEach( element => {element.style.color = 'green'})
 
+//appendChild and prepend
+let firstNav = document.createElement('a');
+let textFirstNav = document.createTextNode('Daniel');
+let lastNav = document.createElement('a');
+let textLastNav = document.createTextNode('Prue');
+let navBar = document.querySelector('nav');
+firstNav.appendChild(textFirstNav);
+lastNav.appendChild(textLastNav);
+navBar.prepend(firstNav);
+navBar.appendChild(lastNav);
